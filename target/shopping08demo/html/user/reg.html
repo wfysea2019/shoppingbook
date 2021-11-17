@@ -1,0 +1,145 @@
+<!doctype html>
+<html  lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Register</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="/frontimages/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+		
+		<!--animate.css-->
+        <link rel="stylesheet" href="/css/animate.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="/css/bootstrap.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="/css/bootsnav.css" >
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="/css/responsive.css">
+
+
+    </head>
+	
+	<body>
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+		
+		<!-- signin end -->
+		<section class="signin popup-in">
+			<div class="container">
+
+				<div class="sign-content popup-in-content">
+					<div class="popup-in-txt">
+						<h2>注 册</h2>
+						
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="signin-form">
+									<form action="signin.html">
+										<div class="form-group">
+										    <label for="name">用户名</label>
+										    <input type="text" class="form-control" id="name" placeholder="请输入用户名">
+											<span id="nameMsg"></span>
+										</div><!--/.form-group -->
+										<div class="form-group">
+											<label for="pwd">密码</label>
+										    <input type="password" class="form-control" id="pwd" placeholder="请输入密码">
+										</div><!--/.form-group -->
+										<div class="form-group">
+											<label for="repwd">重复密码</label>
+											<input type="password" class="form-control" id="repwd" placeholder="请重复输入密码">
+										</div><!--/.form-group -->
+										<div class="form-group">
+											<label for="email">邮箱</label>
+											<input type="email" class="form-control" id="email" placeholder="请输入邮箱">
+										</div><!--/.form-group -->
+										<div class="form-group">
+											<label for="j_captcha">验证码</label>
+											<input type="text" id="j_captcha"  placeholder="验证码" style="width:100px;">
+
+												<img id="captcha_img" alt="点击更换" title="点击更换"
+													 onclick="changeVerifyCode(this)" src="/Kaptcha" />
+
+										</div><!--/.form-group -->
+									</form><!--/form -->
+								</div><!--/.signin-form -->
+							</div><!--/.col -->
+						</div><!--/.row -->
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="signin-footer">
+									<button type="button" class="btn signin_btn" id="submit">
+									注 册
+									</button>
+									<p>
+										已有账号?
+										<a href="/html/user/signin.html">去登录</a>
+									</p>
+								</div><!--/.signin-footer -->
+							</div><!--/.col-->
+						</div><!--/.row -->
+					</div><!-- .popup-in-txt -->
+				</div><!--/.sign-content -->
+			</div><!--/.container -->
+
+		</section><!--/.signin -->
+		
+		<!-- signin end -->
+
+		<!--footer copyright start -->
+		<footer class="footer-copyright">
+			<div id="scroll-Top">
+				<i class="fa fa-angle-double-up return-to-top" id="scroll-top1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+			</div><!--/.scroll-Top-->
+
+		</footer><!--/.hm-footer-copyright-->
+		<!--footer copyright  end -->
+
+
+		 <!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="/js/jquery-3.6.0.min.js"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="/js/bootsnav.js"></script>
+		
+		<!-- jquery.sticky.js -->
+		<script src="/js/jquery.sticky.js"></script>
+		<script src="/js/jquery.easing.min.js"></script>
+		
+        
+        <!--Custom JS-->
+        <script src="/js/custom.js"></script>
+		<script src="/js/common.js"></script>
+		<script src="/js/md5.js"></script>
+		<script src="/js/user/reg.js"></script>
+
+    </body>
+	
+</html>

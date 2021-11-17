@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>Bootstrap 101 Template</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link href="../../css/carousel.css" rel="stylesheet">
+
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+	<script src="../../js/bootstrap.min.js"></script>
+	<style>
+	ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+		#footer-1 {
+			clear: both;
+			height: 53px;
+			margin: 0;
+			background: transparent url('../../frontimages/footer-background.png') repeat-x;
+			text-indent: 0px;
+			text-align: center;
+		}
+
+
+
+		#footer-1 p {
+			margin: 0px;
+		}
+
+		#footer-1 a {
+			color: white;
+		}
+
+		#footer-1 .p1 {
+			line-height: 29px;
+			/*border: 1px solid blue;*/
+		}
+
+		#footer-1 .p2 {
+			/*border: 1px solid red;*/
+			line-height: 30px;
+			background-image: url('../../frontimages/footer-background-2.png');
+			background-repeat: no-repeat;
+			width: 760px;
+			margin: 0 auto;
+			background-position: 60px top;
+			color: #888;
+		}
+
+		.recommendation {
+			padding-top: 20px;
+			padding-bottom: 5px;
+			padding-left: 5px;
+			margin-top: 0px;
+			color: #069;
+			border-bottom: 1px #DEAF50 solid;
+			font: bold 16px/18px "微软雅黑 Light";
+		}
+
+
+
+		.search_pre_price {
+			color: #969696;
+			text-decoration: line-through;
+			font-size: 12px;
+			font-weight: normal;
+			font-family: arial, 'Hiragino Sans GB', "Simsun";
+		}
+
+		.search_now_price {
+			font-family: arial, 'Hiragino Sans GB', "Simsun";
+			color: #fa5000;
+			font-size: 14px;
+			overflow: hidden;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+
+		.book_title{
+			max-height: 40px;
+			height: 40px;
+			text-overflow: ellipsis;
+			line-height:20px;
+			overflow: hidden;
+		}
+
+		.book_intro{
+			max-height: 60px;
+			height: 60px;
+			line-height:20px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.recommendation{
+	       min-height:200px;
+        }
+
+#content img.imgBook{
+	width:180px;
+	height:180px;
+}
+
+a{
+	text-decoration:none;
+	color:#464F15;
+
+}
+
+a:hover{
+	text-decoration:none;
+	color:#ff0000;
+}
+
+	</style>
+</head>
+<body>
+<header id="header" class="container-fluid" >
+
+	<div class="row"><img src="../../frontimages/top-banner.jpg" class="img-responsive"/></div>
+
+	</div>
+</header>
+<div id="content"   class="container" >
+ <h1 style="color:red" id="activity-msg">激活</h1>
+</div>
+
+<footer class="container-fluid" id="footer-1">
+    <div class="row"><p class="p1"><a href="#">首页</a> | <a href="#">新书推荐</a> | <a href="#">我的书城</a> | <a
+            href="#">图书信息</a>| <a href="#">畅销排行</a></p>
+    </div>
+    <div class="row"><p class="p2">版权属于前沿科技 artech.cn, Copyright © 2021&nbsp; | Privacy Notice
+        | Terms of Use </p></div>
+</footer>
+
+<script src="../../js/common.js"></script>
+<script>
+	$(function (){
+		var rId=getQueryString("randomID");
+		alert(rId);
+		$.getJSON("/user/active.do",{randomID:rId},function (data){
+			if (data.success){
+				$("#activity-msg").html("激活成功，请跳转到<a href='/html/user/signin.html'>登录</a>页面");
+			}
+			else{
+				$("#activity-msg").html("激活失败！");
+			}
+		})
+
+	})
+
+
+</script>
+
+</body>
+</html>

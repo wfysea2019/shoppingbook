@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="/css/order.css" rel="stylesheet" type="text/css" />
+<link href="/css/shopcar.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/js/user/shopcar.js"></script>
+<script type="text/javascript" src="/js/user/order.js"></script>
+<link rel="shortcut icon" href="/frontimage/logo.png" type="image/x-icon" />
+<title>购物车</title>
+
+
+</head>
+<body>
+<div class="body">
+  <div class="bodybox">
+     
+  	<div class="libox">
+  		<div class="usecenter">
+			<img src="image/user.png" alt=""/> 
+			<a href="#">个人中心</a>
+	    </div>
+	    
+	    <div class="a">
+   	    <img src="image/gerenziliao.png" /> 
+   	    <span>个人资料</span>
+   	    </div>
+   	    <ul>
+   	    	<li><a href="#">个人信息</a></li>
+   	    	<li><a href="#">安全设置</a></li>
+   	    	<li><a href="#">地址管理</a></li>
+   	    </ul>
+   	    
+   	    <div class="a">
+   	    <img src="image/shopcart.png" /> 
+   	    <span>我的购物车</span>
+   	    </div>
+   	    <ul>
+   	    	<li><a href="order/AllOrder.action" style="color:red;">购物车管理</a></li>
+   	    	
+   	    </ul>
+   	    <div class="a">
+   	    <img src="image/jiaoyi.png" /> 
+   	    <span>我的交易</span>
+   	    </div>
+   	    <ul>
+   	    	<li><a href="order/AllOrder.action">订单管理</a></li>
+   	    	<li><a href="#">退款售后</a></li>
+   	    	<li><a href="#">评价商品</a></li>
+   	    </ul>
+   	    
+   	    
+   	    <div class="a">
+   	    <img src="image/shoucang.png" /> 
+   	    <span>我的收藏</span>
+   	    </div>
+   	    <ul>
+   	    	<li><a href="">收藏</a></li>
+   	    	<li><a href="">足迹</a></li>
+   	    </ul>
+   	    
+   	    
+   	    <div class="a">
+   	    <img src="image/kefu1.png" /> 
+   	    <span>在线客服</span>
+   	    </div>
+   	    <ul>
+   	    	<li><a href="">商品咨询</a></li>
+   	    	<li><a href="">意见反馈</a></li>
+   	    	<li><a href="">我的消息</a></li>
+   	    </ul>
+   	   
+  	</div>
+		<div class="mainbox">
+
+  <div class="shopcarbx">
+ 	<div class="infobox">
+ 		 <div class="commodityinfo">商品信息</div>
+ 		 <div class="pricesbox">单价</div>
+ 		 <div class="numberbox">数量</div>
+ 		 <div class="pricesbox">金额</div>
+ 		 <div class="dobox">操作</div>
+ 	</div>
+ 	
+ 		
+ 		<div class="commoditybox">
+			<div class="commodityinfo" >
+			  
+			  <div class="checkbox">
+				<input type="checkbox" class="Checkbox" name="comm_id"  value="1"> 
+			  </div>
+				<div class="commodityimage">
+					<a href="#"><img src="bookImages/20170952-1_u_3.jpg"  alt=""/><span>编程之美</span> </a>
+				</div>
+
+			</div>
+			
+			<div class="moneybox"  comm_price="30" >$30</div>
+			
+			<div class="numberbox">
+			  <input class="reduce" type="button" value="-">
+			  <input class="commoditynumber" type="text" value="2" >
+			  <input class="add"  type="button"   value="+">	
+			</div>
+			
+			<div class="moneybox"   totalPrice="60"> 60</div>
+			
+			<div class="dobox">		
+				<a href="javascript:void(0);" class="delete"  comm_id="1">删除</a>
+			</div>
+		</div>
+		
+		<div class="commoditybox">
+			<div class="commodityinfo" >
+			  
+			  <div class="checkbox">
+				<input type="checkbox" class="Checkbox" name="comm_id" value="2"> 
+			  </div>
+				<div class="commodityimage">
+			   <a href="#"><img src="bookImages/20303174-1_u_1.jpg"  alt=""/><span>傲慢与偏见</span></a>
+				</div>
+
+			</div>
+			
+			<div class="moneybox"  comm_price="45" >$45</div>
+			
+			<div class="numberbox">
+			  <input class="reduce"   type="button" value="-">
+			  <input class="commoditynumber" type="text" value="1" >
+			  <input class="add"  type="button"   value="+">	
+			</div>
+			
+			<div class="moneybox"   totalPrice="45"> 45</div>
+			
+			<div class="dobox">
+				<a href="javascript:void(0);" class="delete"  comm_id="2">删除</a>
+			</div>
+		</div>
+ 
+ 
+ 	
+ 	<div class="hejibox">
+	 	<div class="quanxuanbox">
+	 		<div class="quanxuan">
+	 			<input type="checkbox" name="" id="checkAll" value="">
+	 		</div>
+	 		<span>全选</span>
+	 	</div>
+	 	
+	 	<div class="selectedbox">
+	 		<div class="selectedcommoity">已选商品&nbsp;<label id="selectednumber">0</label>&nbsp;件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;合计：￥<label id="seletedtotalprice">0.00</label></div>
+	 		<input class="jiesuanbox" id="jiesuan" type="submit" value="结算">
+	 	</div>
+	 </div>
+
+ 	
+ </div>
+</div>
+</div>
+</body>
+</html>
